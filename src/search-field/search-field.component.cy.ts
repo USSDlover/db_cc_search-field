@@ -28,10 +28,29 @@ describe("SearchField", () => {
     cy.wrap(onSubmit).should("be.calledOnceWith", "s");
   });
 
+  it("should set the value to empty on clear action", () => {
+    const value = "";
+
+    cy.mount(`<sp-search-field>
+        <input
+            spSearchFieldInput
+            [(ngModel)]="value"
+            (spSearchFieldCleared)="value = ''"
+            type="search"
+         />
+    </sp-search-field>`, { componentProperties: {} });
+    cy.mount(example);
+    cy.get("input").type("search query");
+    cy.findByRole("button").click();
+    cy.wait(500);
+    expect(value).to.equal("");
+  });
+
   it("clears the input when clear button is pressed", () => {
     cy.mount(example);
     cy.get("input").type("search query");
     cy.findByRole("button").click();
+    cy.wait(500);
     cy.get("input").should("have.value", "");
   });
 

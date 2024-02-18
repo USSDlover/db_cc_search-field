@@ -18,6 +18,7 @@ import { SapphireSearchFieldModule } from './search-field/search-field.module';
       aria-label="Search"
       placeholder="Search"
       (spSearchFieldSubmitted)="alert('Searched: ' + value)"
+      (spSearchFieldCleared)="value = ''"
     />
   </sp-search-field>
 </div>

@@ -36,6 +36,12 @@ export class SearchFieldInputDirective {
   submitted = new EventEmitter<string>();
 
   /**
+   * Emitted when `clear` is clicked to clear the search
+   */
+  @Output('spSearchFieldCleared')
+  cleared = new EventEmitter<void>();
+
+  /**
    * Input's placeholder
    */
   @Input()
@@ -57,6 +63,7 @@ export class SearchFieldInputDirective {
     if (element) {
       element.value = '';
 
+      this.cleared.emit();
       this.refocus();
     }
   }
