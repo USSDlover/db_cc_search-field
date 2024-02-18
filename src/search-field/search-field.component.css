@@ -10,24 +10,16 @@
   --sapphire-search-field-size-spacing-control-horizontal: 16px;
   --sapphire-search-field-size-font-weight-input: 400;
   --sapphire-search-field-color-caret: hsl(203, 100%, 39%);
-  --sapphire-search-field-size-height-field: 48px;
   --sapphire-search-field-color-content-placeholder: hsl(205, 23%, 37%);
   --sapphire-search-field-size-focus-ring: 2px;
   --sapphire-search-field-color-focus-ring: hsl(203, 80%, 50%);
   --sapphire-search-field-opacity-disabled: 0.4;
-  --sapphire-search-field-size-height-field: 48px;
-  --sapphire-search-field-size-height-field: 48px;
   --sapphire-search-field-color-content-button-default: hsl(205, 23%, 37%);
   --sapphire-search-field-time-transition: 0.1s;
   --sapphire-search-field-color-content-button-hover: hsl(203, 27%, 33%);
   --sapphire-search-field-color-content-button-active: hsl(202, 100%, 11%);
-  --sapphire-search-field-time-transition: 0.1s;
-  --sapphire-search-field-time-transition: 0.1s;
-  --sapphire-search-field-time-transition: 0.1s;
-  --sapphire-search-field-time-transition: 0.1s;
   --sapphire-search-field-color-content-icon: hsl(205, 23%, 37%);
-  --sapphire-search-field-size-spacing-control-horizontal: 16px;
-}
+  }
 
 .sapphire-search-field {
   box-sizing: border-box;
@@ -138,8 +130,7 @@
   display: none;
 }
 
-.sapphire-search-field__input:placeholder-shown
-  + .sapphire-search-field__button,
+.sapphire-search-field__input:placeholder-shown + .sapphire-search-field__button,
 .sapphire-search-field__input--empty + .sapphire-search-field__button {
   /*
    * Css only solution to:
