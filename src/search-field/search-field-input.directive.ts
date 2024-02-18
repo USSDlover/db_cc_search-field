@@ -56,6 +56,15 @@ export class SearchFieldInputDirective {
     const element: HTMLInputElement | undefined = this.elementRef.nativeElement;
     if (element) {
       element.value = '';
+
+      this.refocus();
+    }
+  }
+
+  refocus() {
+    const element: HTMLInputElement | undefined = this.elementRef.nativeElement;
+    if (element) {
+      element.focus();
     }
   }
 }
